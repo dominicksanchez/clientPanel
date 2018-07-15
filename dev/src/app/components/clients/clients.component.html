@@ -1,0 +1,37 @@
+<div class="wrapInner">
+	<div class="tableHead clearFix mb10">
+		<div class="tableHeadLeft fl">
+			<h3>Clients</h3>
+		</div>
+		<div class="tableHeadRight fr clearFix">
+			<h5 class="fr">Total Owed: {{totalOwed | currency:"USD":true}}</h5>
+			<a href="" routerLink="/add-client" class="fr btnPrimary addClientBtn"><i class="icon ion-md-add"></i> Add Client</a>
+		</div>
+	</div>
+	<div class="tableResponsive">
+		<table *ngIf="clients?.length > 0;else noClients" class="clientsTable">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Balance</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let client of clients">
+					<td class="tCenter">{{client.$key}}</td>
+					<td>{{client.firstName}}  {{client.lastName}}</td>
+					<td>{{client.email}}</td>
+					<td>{{client.balance | currency:"USD":true}}</td>
+					<td class="tCenter"><a href="" [routerLink]="['/client/'+client.$key]" class="btnPrimary">View Detail</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<ng-template #noClients>
+		<hr>
+		<h5>There are no clients in the system.</h5>
+	</ng-template>
+</div>

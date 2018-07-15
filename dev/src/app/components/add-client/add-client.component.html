@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="wrapInner">
+	<div>
+		<a href="" routerLink="/" class="btnDefault">Back</a>
+	</div>
+
+	<div class="addClientBlock">
+		<h3>Add Client</h3>
+		<form novalidate #f="ngForm" (ngSubmit)="onSubmit(f)">
+			<div class="formGroup">
+				<label for="firstName">First Name</label>
+				<input type="text" [(ngModel)]="client.firstName" name="firstName" #clientFirstName="ngModel" minlength="2" required>
+				<div class="error" *ngIf="clientFirstName.errors?.required && clientFirstName.touched">
+					First name is required
+				</div>
+				<div class="error" *ngIf="clientFirstName.errors?.minlength && clientFirstName.touched">
+					Must be at least 2 characters
+				</div>
+			</div>
+			<div class="formGroup mt15">
+				<label for="lastName">Last Name</label>
+				<input type="text" [(ngModel)]="client.lastName" name="lastName" #clientLastName="ngModel" minlength="2" required>
+				<div class="error" *ngIf="clientLastName.errors?.required && clientLastName.touched">
+					Last name is required
+				</div>
+				<div class="error" *ngIf="clientLastName.errors?.minlength && clientLastName.touched">
+					Must be at least 2 characters
+				</div>
+			</div>
+			<div class="formGroup mt15">
+				<label for="email">Email Address</label>
+				<input type="text" [(ngModel)]="client.email" name="email" #clientEmail="ngModel" required>
+				<div class="error" *ngIf="clientEmail.errors?.required && clientEmail.touched">
+					Email is required
+				</div>
+			</div>
+			<div class="formGroup mt15">
+				<label for="phone">Phone number</label>
+				<input type="text" [(ngModel)]="client.phone" name="phone" #clientPhone="ngModel" minlength="11" required>
+				<div class="error" *ngIf="clientPhone.errors?.minlength && clientPhone.touched">
+					Add a valid phone number
+				</div>
+			</div>
+			<div class="formGroup mt15">
+				<label for="balance">Balance</label>
+				<input type="number" [(ngModel)]="client.balance" name="balance" #clientBalance="ngModel" [disabled]="disabledBalanceOnAdd">
+			</div>
+
+			<input type="submit" class="btnPrimary mt15" value="Submit">
+		</form>
+	</div>
+</div>

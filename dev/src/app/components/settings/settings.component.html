@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div class="wrapInner">
+	<div>
+		<a href="" routerLink="/" class="btnDefault">Back</a>
+	</div>
+
+	<div class="settingsBlock mt30">
+		<h3>Edit Settings</h3>
+		<div class="formBlock">
+			<form (submit)="onSubmit()">
+				<div class="formGroup mt15">
+					<label class="inline">Allow Registration </label>
+					<input type="checkbox" [checked]="settings.allowRegistration" (change)="settings.allowRegistration = !settings.allowRegistration">
+				</div>
+				<div class="formGroup mt15">
+					<label class="inline">Disable Balance On Add </label>
+					<input type="checkbox" [checked]="settings.disableBalanceOnAdd" (change)="settings.disableBalanceOnAdd = !settings.disableBalanceOnAdd">
+				</div>
+				<div class="formGroup mt15">
+					<label class="inline">Disable Balance On Edit </label>
+					<input type="checkbox" [checked]="settings.disableBalanceOnEdit" (change)="settings.disableBalanceOnEdit = !settings.disableBalanceOnEdit">
+				</div>
+				<input type="submit" class="btnPrimary mt15 w80" value="Save">
+			</form>
+		</div>
+	</div>
+</div>
+
+

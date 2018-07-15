@@ -1,0 +1,22 @@
+<div class="wrapInner">
+	<div class="registerForm">
+		<form (submit)="onSubmit()">
+			<div class="loginLogo">
+				<img src="assets/images/logo.png" alt="">
+			</div>
+			<h3>Register</h3>
+			<div class="formGroup mt15">
+				<label for="email">Email Address</label>
+				<input type="email" [(ngModel)]="email" name="email">
+			</div>
+			<div class="formGroup mt15">
+				<label for="password">Password</label>
+				<input type="password" [(ngModel)]="password" name="password">
+			</div>
+			<div class="backToLoginTxt">
+				<p>Already have an account? <a href="#" routerLink="/login">Login</a></p>
+			</div>
+			<input type="submit" class="btnPrimary mt15" value="Register">
+		</form>
+	</div>
+</div>

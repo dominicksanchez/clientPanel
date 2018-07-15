@@ -1,0 +1,33 @@
+<header>
+<div class="wrapInner">
+	<h1><a href="" routerLink="/">CLIENT PANEL APP</a></h1>
+
+	<div (click)="showFirst=!showFirst" class="hidePc">
+		<i class="icon ion-md-menu navMenuIcon" *ngIf="showFirst"></i>
+		<i class="icon ion-md-close navMenuIcon" *ngIf="!showFirst"></i>
+	</div>
+	<div class="navPc">
+		<nav>
+			<ul>
+				<li *ngIf="isLoggedIn" class="fl" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }"><a href="#" routerLink="/">Dashboard</a></li>
+				<li *ngIf="!isLoggedIn && showRegister" class="fr" [routerLinkActive]="['active']" ><a href="#" routerLink="/register">Register</a></li>
+				<li *ngIf="!isLoggedIn && showRegister" class="fr" [routerLinkActive]="['active']" ><a href="#" routerLink="/login">Login</a></li>
+				<li *ngIf="isLoggedIn" class="fr"><span class="navName">{{loggedInUser}} |</span> <a href="#" (click)="onLogoutClick()" class="logout">Logout</a></li>
+				<li *ngIf="isLoggedIn" class="fr" [routerLinkActive]="['active']" ><a href="#" routerLink="/settings">Settings</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="navSp">
+		<nav class="navSp" *ngIf="!showFirst">
+			<ul>
+				<li *ngIf="isLoggedIn" class="fr"><span class="navName">Welcome, {{loggedInUser}}</span></li>
+				<li *ngIf="isLoggedIn" class="fl" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }"><a href="#" routerLink="/">Dashboard</a></li>
+				<li *ngIf="isLoggedIn" class="fr" [routerLinkActive]="['active']" ><a href="#" routerLink="/settings">Settings</a></li>
+				<li *ngIf="!isLoggedIn && showRegister" class="fr" [routerLinkActive]="['active']" ><a href="#" routerLink="/register">Register</a></li>
+				<li *ngIf="!isLoggedIn && showRegister" class="fr" [routerLinkActive]="['active']" ><a href="#" routerLink="/login">Login</a></li>
+				<li *ngIf="isLoggedIn" class="fr"><a href="#" (click)="onLogoutClick()" class="logout">Logout</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+</header>

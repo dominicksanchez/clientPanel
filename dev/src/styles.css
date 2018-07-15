@@ -1,0 +1,475 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans";
+}
+
+.wrapInner {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    background-color: #0288d1;
+    -webkit-box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,0.14), 0 3px 3px -2px rgba(0,0,0,0.12), 0 1px 8px 0 rgba(0,0,0,0.2);
+    height: 60px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+	color: #fff;
+    font-size: 20px;
+    padding: 0;
+    display: inline-block;
+    line-height: 3;
+}
+
+header nav {
+    display: inline-block;
+    width: 85%;
+    text-align: right;
+    position: relative;
+    top: 3px;
+}
+
+
+nav li {
+    padding: 0 20px;
+    list-style: none;
+}
+nav li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+nav li.active a {
+	color: #fff;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border: 1px solid rgba(0,0,0,.03);
+    box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+}
+
+table tr th,
+table tr td {
+  border: 1px solid #ddd; 
+  padding: 4px 15px;
+}
+
+.tCenter {
+    text-align: center;
+}
+
+.clearFix {
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.btnPrimary {
+    text-decoration: none;
+    font-size: 11px;
+    color: rgba(255,255,255,0.87);
+    background-color: rgb(16,108,200);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    display: inline-block;
+    border: none;
+}
+
+.btnDanger {
+    text-decoration: none;
+    font-size: 11px;
+    color: #fff;
+    background-color: #de3641;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    display: inline-block;
+    border: none;
+}
+
+.btnDefault {
+    text-decoration: none;
+    font-size: 11px;
+    color: #000;
+    background-color: rgb(250,250,250);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    display: inline-block;
+    border: none;
+}
+
+
+.addClientBtn {
+    margin-right: 20px;
+}
+
+.tableHeadRight h5 {
+   line-height: 2; 
+}
+
+.settingsBlock, .registerForm, .loginForm, .addClientBlock form, .editClient form {
+    color: rgba(0,0,0,0.87);
+    background-color: rgb(255,255,255);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12);
+    width: 60%;
+    padding: 20px;
+}
+
+.registerForm, .loginForm {
+    width: 30%;
+    margin: 80px auto 0;
+}
+
+.settingsBlock {
+     width: 30%;
+}
+
+.settingsBlock label, .registerForm label, .loginForm label, .addClientBlock label, .editClient label {
+    display: block;
+    font-size: 12px;
+}
+
+.settingsBlock input, .registerForm input, .loginForm input, .addClientBlock input, .editClient input {
+   width: 100%;
+   height: 30px;
+   border: none;
+   border-bottom: 2px solid #ccc; 
+}
+
+.settingsBlock input[type='checkbox'] {
+    width: inherit;
+    height: inherit;
+}
+
+.settingsBlock .inline {
+    display: inline-block;
+}
+
+.settingsBlock input:focus, .registerForm input:focus, .loginForm input:focus, .addClientBlock input:focus, .editClient input:focus {
+    border-bottom: 2px solid #039be5;
+}
+.addClientBlock h3, .editClient h3 {
+    margin: 30px 0 20px;
+}
+
+.registerForm h3,
+.loginForm h3 {
+    margin-top: 10px 0 20px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.error {
+    color: #de3641;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.flashError {
+    color: #de3641;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #de3641;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.flassSuccess {
+    color: #de3641;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #106cc8;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.clientInfoHead p {
+    line-height: 1.8;
+    margin: 0 10px 0 5px;
+}
+
+.colorRed {
+    color: #de3641;
+}
+
+.colorGreen {
+    color: #00c853;
+}
+
+.ml246 {
+    margin-left: 246px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.settingsBlock input.w80 {
+    width: 80px;
+}
+
+.loginLogo {
+    text-align: center;
+}
+
+.backToLoginTxt p,
+.noAccountTxt p {
+    font-size: 12px;
+    padding: 10px 0 20px;
+}
+
+.backToLoginTxt p a,
+.noAccountTxt p a {
+    text-decoration: none;
+    color: #106cc8;
+}
+
+.backToLoginTxt p a:hover,
+.noAccountTxt p a:hover {
+    text-decoration: underline;
+}
+
+.tableHead {
+    margin-top: 50px;
+}
+
+table tr th, table tr td {
+    padding: 10px 15px;
+}
+
+
+.btnPrimary:hover,
+.btnDanger:hover,
+.btnDefault:hover,
+.tableHead a:hover {
+    opacity: .7;
+}
+
+.clientsTable tr th,
+.clientsTable tr td:first-child {
+    text-align: left;
+}
+
+.clientsTable tr th:last-child {
+    text-align: center;
+}
+
+.clientsTable tr:nth-child(even) {
+    background: #f3f3f3;
+}
+
+.clientsTable tbody tr:hover {
+    background: #e6e6e6;
+}
+
+.btnPrimary,
+.btnDanger,
+.btnDefault {
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+.showBalanceUpdateInput {
+    margin: 30px 0;
+}
+
+.showBalanceUpdateInput .inputBal {
+    padding: 3px;
+    height: 23px;
+    margin-right: 10px;
+}
+
+nav ul li a:hover,
+.logout:hover {
+    text-decoration: underline;
+}
+
+.navName {
+    color: #fff;
+    font-size: 14px;
+}
+
+.navMenuIcon {
+    display: none;
+}
+
+.navPc {
+    display: block;
+    float: right;
+    width: 51%;
+    text-align: right;
+    position: relative;
+    top: 15px;
+}
+
+.navSp {
+    display: none;
+}
+
+.hidePc {
+    display: none;
+}
+
+@media only screen and (max-width : 767px) {
+    .wrapInner {
+        width: calc(100% - 20px);
+    }
+
+    .registerForm, .loginForm {
+        width: calc(100% - 40px);
+        margin: 80px auto 0;
+        background: none;
+        box-shadow: none;
+    }
+
+    .navMenuIcon {
+        display: block;
+        font-size: 32px;
+        top: 8px;
+        right: 20px;
+        position: absolute;
+        color: #fff;
+    }
+
+    header h1 {
+        padding-left: 10px;
+    }
+
+    header nav {
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #fff;   
+    }
+
+    header nav li {
+        display: block;
+        float: none !important;
+        text-align: left;
+        padding: 15px 10px;
+        background: #fff;
+        border-bottom: 1px solid #ccc;
+    }
+
+    header nav li p,
+    header nav li span,
+    header nav li a {
+        color: #000 !important;
+        display: block;
+        text-decoration: none;
+    }
+
+    .navPc {
+        display: none;
+    }
+    
+    .navSp {
+        display: block;
+    }
+
+    .tableHeadLeft {
+        float: none;
+        display: block;
+        padding: 10px;
+    }
+
+    .tableHeadRight {
+        float: none;
+        display: block;
+        padding: 10px;
+    }
+
+    .tableHeadRight h5 {
+        float: none;
+    }
+
+    .addClientBtn {
+        float: right;
+        margin-right: 0;
+    }
+
+    .tableHeadRight h5 {
+        float: left;
+    }
+
+    table tr th, table tr td {
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .tableResponsive {
+        overflow-x: auto;
+        margin: 0 10px;
+    }
+
+    .addClientBlock form,
+    .editClient form {
+        width: 100%;
+        background: none;
+        box-shadow: none;
+        padding: 0 !important;
+    }
+
+    .settingsBlock {
+        width: calc(100% - 40px);
+    }
+
+    .tableHead {
+        margin-top: 30px;
+    }
+
+    .hidePc {
+        display: block;
+    }
+}
